@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yahtzee para 2 jugadores</title>
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="page-header">
+        <div>
+          <h1>Yahtzee</h1>
+          <p>Simulacion funcional para 2 jugadores.</p>
+        </div>
+        <button id="restart-button" class="secondary-button">Reiniciar partida</button>
+      </header>
+
+      <section class="layout-grid">
+        <section class="panel game-panel">
+          <div class="panel-header">
+            <h2>Turno actual</h2>
+            <span id="turn-indicator" class="status-badge"></span>
+          </div>
+
+          <div class="status-grid">
+            <article class="status-card">
+              <span class="status-label">Jugador</span>
+              <strong id="current-player-name"></strong>
+            </article>
+            <article class="status-card">
+              <span class="status-label">Lanzamientos</span>
+              <strong id="rolls-left"></strong>
+            </article>
+            <article class="status-card">
+              <span class="status-label">Estado</span>
+              <strong id="game-message"></strong>
+            </article>
+          </div>
+
+          <section class="dice-section">
+            <div class="section-title-row">
+              <h3>Dados</h3>
+              <button id="roll-button" class="primary-button">Lanzar dados</button>
+            </div>
+            <div id="dice-container" class="dice-grid"></div>
+            <p class="helper-text">
+              Despues del primer lanzamiento, puedes seleccionar los dados que deseas conservar.
+            </p>
+          </section>
+
+          <section class="category-section">
+            <div class="section-title-row">
+              <h3>Categorias disponibles</h3>
+            </div>
+            <div id="category-list" class="category-list"></div>
+          </section>
+        </section>
+
+        <aside class="panel scoreboard-panel">
+          <div class="panel-header">
+            <h2>Tabla de puntajes</h2>
+          </div>
+          <div id="scoreboard" class="scoreboard"></div>
+          <div id="final-result" class="final-result hidden"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script defer src="./src/shared/namespace.js"></script>
+    <script defer src="./src/config/categories.js"></script>
+    <script defer src="./src/domain/entities/Player.js"></script>
+    <script defer src="./src/domain/services/ScoreCalculator.js"></script>
+    <script defer src="./src/domain/services/DiceRoller.js"></script>
+    <script defer src="./src/domain/models/YahtzeeGame.js"></script>
+    <script defer src="./src/ui/renderers/DiceFaceRenderer.js"></script>
+    <script defer src="./src/ui/components/YahtzeeUI.js"></script>
+    <script defer src="./src/app/bootstrap.js"></script>
+  </body>
+</html>
