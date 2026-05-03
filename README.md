@@ -274,13 +274,6 @@ puedes hacerlo tocando archivos concretos sin reescribir toda la aplicacion.
 - Tests unitarios para `ScoreCalculator` y `YahtzeeGame`.
 - Empaquetado con modulos ES o bundler si el proyecto crece.
 
-## Notas de mantenimiento
-
-- Si deseas modificar categorias, empieza por [categories.js](./src/config/categories.js).
-- Si deseas cambiar reglas de puntuacion, revisa [ScoreCalculator.js](./src/domain/services/ScoreCalculator.js).
-- Si deseas cambiar turnos o flujo del juego, revisa [YahtzeeGame.js](./src/domain/models/YahtzeeGame.js).
-- Si deseas cambiar la apariencia o animacion de los dados, revisa [main.css](./assets/styles/main.css) y [DiceFaceRenderer.js](./src/ui/renderers/DiceFaceRenderer.js).
-- Si deseas cambiar interacciones visuales, revisa [YahtzeeUI.js](./src/ui/components/YahtzeeUI.js).
 
 ## Estado actual
 
@@ -292,5 +285,5 @@ El proyecto se encuentra funcional para el alcance solicitado:
 - estructura organizada
 
 ## Autor
-
+Juan Casadiego 
 Proyecto desarrollado como implementacion funcional academica del juego Yahtzee para 2 jugadores.
